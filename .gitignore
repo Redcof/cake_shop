@@ -10,6 +10,8 @@
 
 # production
 /build
+cake_shop_venv
+__pycache__
 
 # misc
 .DS_Store

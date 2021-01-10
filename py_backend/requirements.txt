@@ -1,0 +1,13 @@
+# Creating virtual environment: python3 -m venv cake_shop_venv
+# activate virtual environment: source cake_shop_venv/bin/activate
+# deactivate virtual env: deactivate
+
+# This file contains all dependencies required by this python application
+# python -m pip install -r requirements.txt
+flask
+flask-restful
+python-dotenv
+
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
