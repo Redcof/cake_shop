@@ -1,3 +1,27 @@
+### Find backend Flask configuraton in
+py_backend/run.sh
+
+
+### Run python API server and Frontend
+npm run start-backend
+npm start
+
+# Development guide
+git clone
+## Setup Frontend
+npm install
+## Setup Flask Backend
+cd py_backend
+### Creating virtual environment: 
+python3 -m venv cake_shop_venv
+### Activate virtual environment: 
+source cake_shop_venv/bin/activate
+### This file contains all dependencies required by this python application
+python -m pip install -r requirements.txt
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
@@ -66,12 +90,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-# Python Backend
-
-### Find configuraton in
-py_backend/run.sh
-
-### Run python API server
-cd py_backend
-sh run.sh

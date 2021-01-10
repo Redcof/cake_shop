@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-api": "cd py_backend && cake_shop_venv/bin/flask run --no-debugger",
+    "backend": "cd py_backend && sh run.sh",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
