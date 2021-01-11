@@ -12,6 +12,7 @@
 /build
 cake_shop_venv
 __pycache__
+.idea
 
 # misc
 .DS_Store
