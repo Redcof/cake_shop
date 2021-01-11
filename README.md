@@ -2,7 +2,7 @@
 ### Clone the repo
 `git clone https://github.com/Redcof/cake_shop.git`
 
-### Find backend Flask configuraton in
+### Find backend Flask configuration in
 py_backend/run.sh
 
 
