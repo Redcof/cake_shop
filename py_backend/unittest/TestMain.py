@@ -6,7 +6,7 @@ def hello_world():
     hello_world_ascii = [ord(_l) for _l in "Hello World"]
     char_ctr = 0
     with open('ascii_log.txt', 'a+') as f:
-        f.write("\n\n----------------------")
+        f.write("\n\n----------------------\n")
         while True:
             ascii_ = random.randrange(0, 255)
             f.write("%03d " % ascii_)

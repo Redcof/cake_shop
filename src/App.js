@@ -3,19 +3,56 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 
+// const http = require('http')
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
+  const [product_list, setProduct] = useState([])
 
   useEffect(() => {
-    fetch('/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    });
-  }, []);
+    setInterval(() => {
+      fetch('/bubu-time').then(res => res.json()).then(data => {
+        setCurrentTime(data.time);
+      });
+    }, 990)
 
+    fetch('/product-list').then(
+      (response) => {
+      return response.json()
+    }).then((data) => {
+      console.log("data", data.products);
+      setProduct(data.products)
+    })
+    // let options = {
+    //   host: 'localhost',
+    //   path: '/time',
+    //   //since we are listening on a custom port, we need to specify it by hand
+    //   port: '5000',
+    //   headers: {
+    //     'Access-Control-Allow-Origin': 'no-cors'
+    //   },
+    //   //This is what changes the request to a POST request
+    //   method: 'GET',
+    // };
+
+    // http.request(options, (response) => {
+    //   let data = response.json()
+    //   setCurrentTime(data.time);
+    // }).on('error', function (err) {
+    //   console.log(err)
+    //   setCurrentTime(
+    //     <span style={{ color: 'red', fontFamily: 'monospace' }}>{err.message}</span>
+    //   );
+    // }).end()
+
+  }, []);
+  
   return (
     <div className="App">
       <p>The current time is {currentTime}.</p>
+      <ul>
+        {product_list.map((item) => <li>{item}</li>)}
+      </ul>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
@@ -26,7 +63,7 @@ function App() {
           <span>Learn </span>
           <a
             className="App-link"
-            href="https://reactjs.org/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,7 +72,7 @@ function App() {
           <span>, </span>
           <a
             className="App-link"
-            href="https://redux.js.org/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -44,7 +81,7 @@ function App() {
           <span>, </span>
           <a
             className="App-link"
-            href="https://redux-toolkit.js.org/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -53,7 +90,7 @@ function App() {
           ,<span> and </span>
           <a
             className="App-link"
-            href="https://react-redux.js.org/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -1,0 +1,3 @@
+Open 2 terminal windows here
+Run this command in one terminal 'npm run backend'
+Run this command in another terminal 'npm run start'

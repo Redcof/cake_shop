@@ -10,10 +10,24 @@ import random
 # static_path = f"{parent_dir}/build"
 # print("###############")
 # print(f"template_path - {template_path}", static_path)
-
 app = Flask(__name__)
 
 
-@app.route('/time')
+@app.route('/bubu-time')
 def hello_world():
-    return {"time": random.random()}
+    import datetime
+
+    return {"time": datetime.datetime.now()}
+
+@app.route('/product-list')
+def product_list():
+    return {
+        "products": [
+            'apple',
+            'motorola',
+            'sony',
+            'samsung',
+            'nokia',
+            'lg',
+        ]
+    }
